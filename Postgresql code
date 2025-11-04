@@ -1,0 +1,16 @@
+CREATE DATABASE librarydb;
+\c librarydb;
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    is_issued BOOLEAN DEFAULT FALSE
+);
+SELECT * FROM books;
+DELETE FROM books;
+DROP TABLE books;
+CREATE USER libuser WITH PASSWORD 'Yashvin@19';
+GRANT ALL PRIVILEGES ON DATABASE librarydb TO postgresql;
+private static final String USER = "postgreSql";
+private static final String PASSWORD = "Yashvin@19";
+
